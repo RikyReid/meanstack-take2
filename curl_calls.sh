@@ -7,3 +7,13 @@ function post() {
   --data "{\"username\":\"dickeyxxx\", \"body\":\"node rules!\"}" \
   $HOST/api/posts
 }
+
+function authenticate() {
+  curl -X POST -d '{"username": "dickeyxxx", "password": "pass"}' -H \
+  "Content-Type: application/json" $HOST/api/users
+}
+
+function createUser() {
+  curl -X POST -d '{"username": "dickeyxxx", "password": "pass"}' -H \
+  "Content-Type: application/json" $HOST/api/users
+}
